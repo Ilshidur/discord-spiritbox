@@ -4,7 +4,7 @@ Un bot Discord avec reconnaissance vocale. Objectif : faire une spiritbox comme 
 
 Suite à un raid Twitch de Grafikart pendant le live coding de ce projet, je l'open source pour clarifier certains points pour les retardataires. Merci Grafikart. <3
 
-![Youpi](Trophee_pour_Ilshi.PNG)
+![Youpi](Trophee_pour_Ilshi.png)
 
 ## Comment démarrer le projet
 
@@ -12,9 +12,13 @@ Il est juste nécessaire d'avoir [Docker](https://www.docker.com) et [Docker com
 
 **1ère étape :** Copier le fichier `.env.dist` vers un nouveau `.env` et ajouter le token Discord après le `=`.
 
+**2nde étape :**
+
 ```bash
 docker-compose up --build
 ```
+
+**Et voilà !**
 
 ## Fonctionnement
 
