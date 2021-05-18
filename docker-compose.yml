@@ -1,0 +1,25 @@
+version: '3.3'
+
+services:
+  spiritbox:
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    container_name: spiritbox
+    networks:
+      - internal
+    depends_on:
+      - vosk
+    volumes:
+      - .:/home/app
+      - /home/app/node_modules
+    command: ["npm", "run", "run:dev"]
+
+  vosk:
+    image: alphacep/kaldi-fr:latest
+    container_name: vosk
+    networks:
+      - internal
+
+networks:
+  internal:
